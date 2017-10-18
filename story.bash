@@ -12,7 +12,6 @@ dist_name=$(echo $module | awk '{gsub(/::/,"-")}; 1')
 echo $dist_name
 
 cat << EOF > dist.ini
-
 name = $module
 
 [ReadmeFromPod]
@@ -28,14 +27,11 @@ disable = true
 ;
 ; you can use Perl6 regular expressions
 ; match = ^ 'xt/'
-
 EOF
 
 cat << EOF > .gitignore
-
 lib/.precomp/
 .precomp
 *.tar.gz
 $dist_name-*
-
 EOF
