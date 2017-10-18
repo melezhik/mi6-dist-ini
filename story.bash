@@ -12,6 +12,7 @@ dist_name=$(echo $module | awk '{gsub(/::/,"-")}; 1')
 echo $dist_name
 
 cat << EOF > dist.ini
+; dist.ini
 name = $module
 
 [ReadmeFromPod]
